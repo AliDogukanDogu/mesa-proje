@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mesa"
+version = "0.1.0"
+description = "MESA - BIST pilotu al/sat sinyal asistani (egitim amacli)"
+requires-python = ">=3.12"
+
+[project.scripts]
+mesa = "mesa.cli:app"
+
+[tool.setuptools]
+packages = ["mesa"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100

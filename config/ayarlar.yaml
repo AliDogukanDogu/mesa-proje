@@ -1,0 +1,45 @@
+# Parametreler (Kapsam belgesi v1.1). Esikler yalniz egitim penceresinde ayarlanir.
+veri:
+  baslangic: "2014-01-02"
+  holdout_baslangic: "2025-11-01"
+  holdout_bitis: "2026-10-31"
+  eksik_esik: 0.20          # bu orani asan seri askiya alinir
+  bayat_gun: 7
+  aykiri_z: 6.0
+
+degerlendirme:
+  ufuk: 5                   # ileri getiri, islem gunu
+  ufuklar: [1, 5, 10, 20, 60]
+  ic_esik: 0.03
+  q_esik: 0.01              # FDR duzeltmeli
+  q_izleme: 0.05
+  permutasyon: 5000         # gelistirmede 1000 kullanilabilir
+  blok_boyu: 20
+  istikrar_oran: 0.5
+  isaret_tutarlilik: 0.65
+  korelasyon_esik: 0.8
+  tohum: 42
+
+agirlik:
+  tek_degisken_max: 0.15
+  tek_grup_max: 0.35
+  haber_max: 0.30
+  yumusatma_yeni: 0.7
+
+sinyal:
+  esik: 0.5
+  uyum_min: 0.60
+  vix_rejim: 30
+  xu100_sok: -0.05
+  usdtry_sok: 0.03
+  sok_sure_gun: 5
+  risk_payi: 0.01
+  zarar_kes_atr: 2.0
+
+backtest:
+  egitim_yil: 3
+  test_ay: 6
+  maliyet: 0.002            # yon basina
+  maliyet_duyarlilik: [0.001, 0.003]
+  max_tutma_gun: 20
+  rastgele_simulasyon: 1000

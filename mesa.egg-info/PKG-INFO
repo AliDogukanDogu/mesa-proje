@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: mesa
+Version: 0.1.0
+Summary: MESA - BIST pilotu al/sat sinyal asistani (egitim amacli)
+Requires-Python: >=3.12

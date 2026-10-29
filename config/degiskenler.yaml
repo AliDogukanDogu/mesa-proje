@@ -1,0 +1,30 @@
+# Degisken kayit defteri. SORUMLU: C (Plan gorev C-2).
+# Kapsam belgesindeki "Degisken seti" tablosundaki 24 adayi buraya ekle.
+# Zorunlu alanlar: id, grup, kaynak, hesap, beklenen_yon, dalga, durum
+#   beklenen_yon: negatif | pozitif | belirsiz
+#   durum: aday | aktif | izleme | emekli
+# Asagidaki 3 kayit ornektir; ayni bicimde devam et.
+degiskenler:
+  - id: z_sapma_20
+    grup: 1
+    kaynak: fiyat
+    hesap: "(kapanis - 20g ort) / 20g std"
+    beklenen_yon: negatif
+    dalga: 1
+    durum: aday
+
+  - id: rsi_14
+    grup: 1
+    kaynak: fiyat
+    hesap: "RSI(14)"
+    beklenen_yon: negatif
+    dalga: 1
+    durum: aday
+
+  - id: rastgele_kontrol
+    grup: 0
+    kaynak: yok
+    hesap: "N(0,1) gurultu, sabit tohum"
+    beklenen_yon: belirsiz
+    dalga: 1
+    durum: aday

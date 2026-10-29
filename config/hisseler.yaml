@@ -1,0 +1,36 @@
+# 20 hisse (Kapsam belgesi v1.1). Yahoo kodu = kod + ".IS"
+hisseler:
+  - {kod: AKBNK, ad: Akbank, sektor: Bankacilik}
+  - {kod: GARAN, ad: Garanti BBVA, sektor: Bankacilik}
+  - {kod: ISCTR, ad: Turkiye Is Bankasi (C), sektor: Bankacilik}
+  - {kod: YKBNK, ad: Yapi Kredi Bankasi, sektor: Bankacilik}
+  - {kod: KCHOL, ad: Koc Holding, sektor: Holding}
+  - {kod: SAHOL, ad: Sabanci Holding, sektor: Holding}
+  - {kod: ARCLK, ad: Arcelik, sektor: Dayanikli tuketim}
+  - {kod: FROTO, ad: Ford Otosan, sektor: Otomotiv}
+  - {kod: TOASO, ad: Tofas, sektor: Otomotiv}
+  - {kod: ASELS, ad: Aselsan, sektor: Savunma}
+  - {kod: BIMAS, ad: BIM, sektor: Perakende}
+  - {kod: EREGL, ad: Eregli Demir Celik, sektor: Demir-celik}
+  - {kod: SISE, ad: Sisecam, sektor: Cam}
+  - {kod: PETKM, ad: Petkim, sektor: Petrokimya}
+  - {kod: TUPRS, ad: Tupras, sektor: Rafineri}
+  - {kod: THYAO, ad: Turk Hava Yollari, sektor: Havacilik}
+  - {kod: PGSUS, ad: Pegasus, sektor: Havacilik}
+  - {kod: TCELL, ad: Turkcell, sektor: Telekomunikasyon}
+  - {kod: TTKOM, ad: Turk Telekom, sektor: Telekomunikasyon}
+  - {kod: ENKAI, ad: Enka Insaat, sektor: Insaat}
+
+# Bir hissenin verisi eksik cikarsa siradaki yedek kullanilir.
+yedekler: [EKGYO, MGROS, TAVHL, ULKER, AEFES]
+
+# 8 piyasa serisi: ad -> Yahoo kodu
+piyasa_serileri:
+  XU100: XU100.IS
+  VIX: ^VIX
+  DXY: DX-Y.NYB
+  ABD10Y: ^TNX
+  BRENT: BZ=F
+  ALTIN: GC=F
+  BAKIR: HG=F
+  USDTRY: TRY=X
