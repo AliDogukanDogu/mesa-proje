@@ -28,3 +28,179 @@ degiskenler:
     beklenen_yon: belirsiz
     dalga: 1
     durum: aday
+    # MESA Projesi - Değişken Seti (24 Aday Değişken)
+# Kaynak: MESA Proje Tanım ve Kapsam Belgesi (Sayfa 10-11)
+
+variables:
+  # --- Dalga 1: Piyasa ve Risk Değişkenleri (Must) ---
+  - id: z_sapma_20
+    name: "20 Günlük Fiyat Z-Sapması"
+    description: "(Fiyat - 20g ortalama) / 20g standart sapma"
+    expected_direction: negative
+    wave: 1
+    required: true
+
+  - id: z_sapma_5
+    name: "5 Günlük Fiyat Z-Sapması"
+    description: "(Fiyat - 5g ortalama) / 5g standart sapma"
+    expected_direction: negative
+    wave: 1
+    required: true
+
+  - id: z_sapma_60
+    name: "60 Günlük Fiyat Z-Sapması"
+    description: "(Fiyat - 60g ortalama) / 60g standart sapma"
+    expected_direction: negative
+    wave: 1
+    required: true
+
+  - id: z_sapma_250
+    name: "250 Günlük Fiyat Z-Sapması"
+    description: "(Fiyat - 250g ortalama) / 250g standart sapma"
+    expected_direction: negative
+    wave: 1
+    required: true
+
+  - id: rsi_14
+    name: "RSI (14)"
+    description: "14 günlük Göreceli Güç Endeksi"
+    expected_direction: negative
+    wave: 1
+    required: true
+
+  - id: bollinger_konum
+    name: "Bollinger Bant Konumu"
+    description: "(Fiyat - Alt Bant) / (Üst Bant - Alt Bant), 20 gün, 2 std"
+    expected_direction: negative
+    wave: 1
+    required: true
+
+  - id: hacim_oran
+    name: "Hacim Oranı"
+    description: "Bugünkü hacim / 20g hacim ortalaması"
+    expected_direction: conditional
+    wave: 1
+    required: true
+
+  - id: vix_seviye
+    name: "VIX Düzeyi"
+    description: "VIX Korku Endeksi seviyesi"
+    expected_direction: negative
+    wave: 1
+    required: true
+
+  - id: vix_5g
+    name: "VIX 5G Değişim"
+    description: "VIX 5 günlük % değişim"
+    expected_direction: negative
+    wave: 1
+    required: true
+
+  - id: dxy_20g
+    name: "DXY 20G Değişim"
+    description: "Dolar Endeksi (DXY) 20 günlük % değişim"
+    expected_direction: negative
+    wave: 1
+    required: true
+
+  - id: abd10y_20g
+    name: "ABD 10Y Faiz Değişimi"
+    description: "ABD 10 yıllık tahvil faizi 20 günlük değişim (bp)"
+    expected_direction: negative
+    wave: 1
+    required: true
+
+  - id: brent_1h
+    name: "Brent Petrol Haftalık Değişim"
+    description: "Brent petrol haftalık % değişim"
+    expected_direction: sector_dependent
+    wave: 1
+    required: true
+
+  - id: altin_1h
+    name: "Altın Haftalık Değişim"
+    description: "Altın haftalık % değişim"
+    expected_direction: negative
+    wave: 1
+    required: true
+
+  - id: bakir_1h
+    name: "Bakır Haftalık Değişim"
+    description: "Bakır haftalık % değişim"
+    expected_direction: positive
+    wave: 1
+    required: true
+
+  - id: beta_60
+    name: "60 Günlük BIST100 Betası"
+    description: "60 günlük hisse - XU100 betası"
+    expected_direction: regime_dependent
+    wave: 1
+    required: true
+
+  # --- Dalga 2: Makroekonomi Değişkenleri (Should) ---
+  - id: politika_faizi_deg
+    name: "Politika Faizi Değişimi"
+    description: "Son karar değişimi (bp), yayın gecikmeli"
+    expected_direction: negative
+    wave: 2
+    required: false
+
+  - id: reel_faiz
+    name: "Reel Faiz"
+    description: "Politika faizi - Yıllık TÜFE"
+    expected_direction: negative
+    wave: 2
+    required: false
+
+  - id: tufe_deg
+    name: "TÜFE Değişimi"
+    description: "Yıllık TÜFE'nin aylık değişimi"
+    expected_direction: negative
+    wave: 2
+    required: false
+
+  - id: usdtry_20g
+    name: "USD/TRY 20G Değişim"
+    description: "USD/TRY 20 günlük % değişim"
+    expected_direction: uncertain
+    wave: 2
+    required: false
+
+  # --- Dalga 3: Haber ve Olay Değişkenleri (Could) ---
+  - id: haber_skoru
+    name: "Haber Duygu Skoru"
+    description: "Gemini haber duygu analizi (yön x şiddet/5)"
+    expected_direction: positive
+    wave: 3
+    required: false
+
+  # --- Dalga 4: Takvim ve Duygu Değişkenleri ---
+  - id: takvim_bayram
+    name: "Bayram Kukla Değişkeni"
+    description: "Bayram öncesi/sonrası 5 gün kuklası (dummy)"
+    expected_direction: uncertain
+    wave: 4
+    required: false
+
+  - id: takvim_tatil
+    name: "Tatil Kukla Değişkeni"
+    description: "Okul ve yaz tatili kuklası (dummy)"
+    expected_direction: uncertain
+    wave: 4
+    required: false
+
+  - id: tuketici_guven
+    name: "Tüketici Güven Endeksi"
+    description: "Tüketici güven endeksinin aylık değişimi"
+    expected_direction: positive
+    wave: 4
+    required: false
+
+  # --- Kontrol Değişkeni (Öz-Sınav / Tüm Dalgada) ---
+  - id: rastgele_kontrol
+    name: "Rastgele Gürültü Kontrolü"
+    description: "N(0,1) gürültü, sabit tohum. Motorun RED vermesi beklenir."
+    expected_direction: none
+    wave: all
+    required: true
