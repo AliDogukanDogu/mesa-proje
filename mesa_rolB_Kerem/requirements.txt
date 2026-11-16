@@ -1,0 +1,6 @@
+﻿sqlalchemy
+yfinance
+pandas
+evds
+typer
+pytest
