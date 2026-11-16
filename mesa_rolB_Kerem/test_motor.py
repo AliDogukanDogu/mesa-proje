@@ -1,6 +1,7 @@
 import os
 import sqlite3
 
+
 def test_veritabani_olustu_mu():
     """Test 1: mesa.db dosyasının başarıyla oluşturulduğunu kontrol eder."""
     assert os.path.exists("mesa.db") == True
