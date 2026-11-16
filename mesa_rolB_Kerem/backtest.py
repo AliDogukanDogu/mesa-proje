@@ -1,7 +1,7 @@
 import pandas as pd
+from db import Islem
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from db import Islem
 
 # Veritabanına bağlan
 engine = create_engine('sqlite:///mesa.db')
