@@ -30,7 +30,7 @@ for kod, sektor in hisseler.items():
 session.commit()
 
 print("2. Yahoo Finance'ten fiyat verileri indiriliyor (2014'ten bugüne)...")
-for kod in hisseler.keys():
+for kod in hisseler:
     print(f"{kod} indiriliyor...")
     time.sleep(2)
     veri = yf.download(kod, start="2014-01-02")
