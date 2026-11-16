@@ -1,9 +1,10 @@
-import yfinance as yf
-import pandas as pd
 import time
+
+import pandas as pd
+import yfinance as yf
+from db import Fiyat, Hisse
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from db import Hisse, Fiyat
 
 # Veritabanına bağlan
 engine = create_engine('sqlite:///mesa.db')
